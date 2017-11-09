@@ -26,9 +26,15 @@ while not gameExit:
         # Key events
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_a:
-                lead_x_change -= 10
+                lead_x_change = -10
             if event.key == pygame.K_d:
-                lead_x_change += 10
+                lead_x_change = 10
+
+    # Border detections
+    if lead_x >= WIDTH:
+        lead_x = 0
+    elif lead_x == 0:
+        lead_x = WIDTH
 
     lead_x += lead_x_change
     gameDisplay.fill(WHITE)
