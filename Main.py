@@ -58,6 +58,10 @@ while not gameExit:
     pygame.display.update()
 
     clock.tick(30)
-
+    
 pygame.quit()
 quit()
+
+
+#Isaac is a nerd
+
